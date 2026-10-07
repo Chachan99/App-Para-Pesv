@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, Series, useCurrentFrame, useVideoConfig } from "remotion";
-import { AlertCard, Chip, CityMap, Headline, NightBg, ROUTE_A, ROUTE_B, ROUTE_C, ScanLine, Vignette, useFadeInOut } from "./kit";
+import { AlertCard, Chip, CityMap, GEOZONE, Headline, NightBg, ROUTE_A, ROUTE_B, ROUTE_C, ScanLine, Vignette, useFadeInOut } from "./kit";
 import { S7Brand, S8Cta } from "./MainReel";
 import { COLORS, FEATURES, FONT } from "./theme";
 
@@ -14,7 +14,7 @@ const FleetMap: React.FC<{ labels?: boolean; geofence?: boolean; scale?: number 
   return (
     <CityMap
       scale={scale}
-      geofence={geofence ? { x: 540, y: 860, r: 260, color: COLORS.amber } : undefined}
+      polygon={geofence ? { pts: GEOZONE, color: COLORS.cyan } : undefined}
       routes={[
         { pts: ROUTE_A, t: 0.1 + frame * 0.004, color: COLORS.cyan, label: labels ? "Unidad 01" : undefined },
         { pts: ROUTE_B, t: 0.12 + frame * 0.0045, color: COLORS.ok, label: labels ? "Unidad 02" : undefined },

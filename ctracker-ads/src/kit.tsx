@@ -157,9 +157,10 @@ export const CityMap: React.FC<{
   originX?: number;
   originY?: number;
   geofence?: { x: number; y: number; r: number; color: string };
+  polygon?: { pts: readonly Pt[]; color: string };
   width?: number;
   height?: number;
-}> = ({ routes = [], scale = 1, originX = 540, originY = 960, geofence, width = 1080, height = 1920 }) => {
+}> = ({ routes = [], scale = 1, originX = 540, originY = 960, geofence, polygon, width = 1080, height = 1920 }) => {
   const frame = useCurrentFrame();
   const roads: React.ReactNode[] = [];
   for (let i = 0; i < 12; i++) {
@@ -178,6 +179,9 @@ export const CityMap: React.FC<{
           <g>
             <circle cx={geofence.x} cy={geofence.y} r={geofence.r} fill={`${geofence.color}22`} stroke={geofence.color} strokeWidth={6} strokeDasharray="22 14" />
           </g>
+        ) : null}
+        {polygon ? (
+          <polygon points={polygon.pts.map((p) => p.join(",")).join(" ")} fill={`${polygon.color}1f`} stroke={polygon.color} strokeWidth={5} strokeLinejoin="round" />
         ) : null}
         {routes.map((r, i) => {
           const head = pointOnPath(r.pts, r.t);
@@ -356,3 +360,35 @@ export const ScanLine: React.FC = () => {
     <AbsoluteFill style={{ pointerEvents: "none", opacity: 0.08, background: "repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 4px)", translate: `0px ${frame % 4}px` }} />
   );
 };
+
+/* ───────────── Interfaz de la plataforma (inspirada en la app real) ───────────── */
+
+export const GEOZONE: readonly Pt[] = [[250, 520], [760, 380], [940, 900], [620, 1380], [300, 1100]];
+
+export const SearchBar: React.FC<{ label?: string }> = ({ label = "Buscar dispositivos" }) => (
+  <div style={{ fontFamily: FONT, background: "#fff", color: "#6b7a89", fontSize: 30, fontWeight: 500, borderRadius: 20, padding: "22px 26px", display: "flex", justifyContent: "space-between" }}>
+    <span>{label}</span>
+    <span style={{ color: COLORS.cyanDeep }}>≡</span>
+  </div>
+);
+
+export const DeviceRow: React.FC<{ name: string; sub: string }> = ({ name, sub }) => (
+  <div style={{ fontFamily: FONT, background: "#fff", borderRadius: 20, padding: "20px 24px", display: "flex", gap: 20, alignItems: "center" }}>
+    <div style={{ width: 56, height: 56, borderRadius: 28, background: "#d9e1e8", display: "grid", placeItems: "center", color: "#35506b", fontSize: 28 }}>●</div>
+    <div>
+      <div style={{ color: "#0d1b2e", fontSize: 32, fontWeight: 800 }}>{name}</div>
+      <div style={{ color: "#6b7a89", fontSize: 26 }}>{sub}</div>
+    </div>
+  </div>
+);
+
+export const BottomNav: React.FC<{ active?: number }> = ({ active = 0 }) => (
+  <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 150, background: "#fff", display: "flex", justifyContent: "space-around", alignItems: "center", fontFamily: FONT, fontSize: 24, fontWeight: 600 }}>
+    {["Mapa", "Reportes", "Ajustes", "Cerrar sesión"].map((l, i) => (
+      <div key={l} style={{ textAlign: "center", color: i === active ? "#0d1b2e" : "#8a97a5" }}>
+        <div style={{ fontSize: 40 }}>{["▣", "▤", "⚙", "⎋"][i]}</div>
+        {l}
+      </div>
+    ))}
+  </div>
+);

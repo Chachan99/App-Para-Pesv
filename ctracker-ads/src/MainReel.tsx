@@ -11,6 +11,8 @@ import {
   AlertCard,
   Chip,
   CityMap,
+  DeviceRow,
+  GEOZONE,
   Headline,
   Logo,
   NightBg,
@@ -19,6 +21,8 @@ import {
   ROUTE_B,
   ROUTE_C,
   ScanLine,
+  SearchBar,
+  BottomNav,
   VehicleIcon,
   Vignette,
   useFadeInOut,
@@ -70,6 +74,7 @@ export const S2Map: React.FC = () => {
     <AbsoluteFill>
       <CityMap
         routes={[{ pts: ROUTE_A, t, color: COLORS.cyan, label: "En vivo" }]}
+        polygon={FEATURES.geofences ? { pts: GEOZONE, color: COLORS.cyan } : undefined}
         scale={interpolate(frame, [0, 120], [1.25, 1], { easing: ease })}
         originX={300}
         originY={1100}
@@ -119,21 +124,21 @@ export const S4Control: React.FC = () => {
     <AbsoluteFill>
       <NightBg />
       <Phone width={700} style={{ top: 360 }}>
-        <div style={{ padding: "120px 34px", display: "flex", flexDirection: "column", gap: 24 }}>
-          <div style={{ fontFamily: FONT, color: COLORS.white, fontSize: 46, fontWeight: 900 }}>Mi vehículo</div>
-          <Btn label="Ver ubicación" active />
+        <CityMap width={700} height={1435} scale={1.5} originX={540} originY={900} polygon={FEATURES.geofences ? { pts: GEOZONE, color: COLORS.cyan } : undefined} routes={[{ pts: ROUTE_A, t: 0.55, color: COLORS.cyan }]} />
+        <div style={{ position: "absolute", top: 80, left: 24, right: 24, display: "flex", flexDirection: "column", gap: 14 }}>
+          <SearchBar />
+          <DeviceRow name="Moto 01" sub="en línea · hace 1 min" />
+        </div>
+        <div style={{ position: "absolute", left: 24, right: 24, bottom: 180, display: "flex", flexDirection: "column", gap: 16 }}>
           {FEATURES.history ? <Btn label="Historial de recorridos" /> : null}
-          {FEATURES.geofences ? <Btn label="Geozonas" /> : null}
-          <div style={{ position: "relative", height: 290, borderRadius: 28, overflow: "hidden", border: `2px solid ${COLORS.cyan}55` }}>
-            <CityMap width={620} height={290} scale={2.2} originX={540} originY={960} routes={[{ pts: ROUTE_A, t: 0.1 + frame * 0.004, color: COLORS.cyan }]} />
-          </div>
           {FEATURES.remoteCut ? <Btn label="Apagado remoto del motor" color={COLORS.alert} active={frame > 40} /> : null}
         </div>
         {FEATURES.remoteCut ? (
-          <div style={{ position: "absolute", left: 40, right: 40, bottom: 60, opacity: confirm, scale: 0.9 + confirm * 0.1, fontFamily: FONT, background: "#0d1b2e", border: `3px solid ${COLORS.alert}`, borderRadius: 32, padding: 34, textAlign: "center", color: COLORS.white, fontSize: 36, fontWeight: 700 }}>
+          <div style={{ position: "absolute", left: 40, right: 40, top: 560, opacity: confirm, scale: 0.9 + confirm * 0.1, fontFamily: FONT, background: "#0d1b2e", border: `3px solid ${COLORS.alert}`, borderRadius: 32, padding: 34, textAlign: "center", color: COLORS.white, fontSize: 36, fontWeight: 700 }}>
             Corte enviado · no vuelve a encender hasta que lo habilites
           </div>
         ) : null}
+        <BottomNav />
       </Phone>
       <Headline top={150} size={110}>Toma el control</Headline>
       <Vignette />

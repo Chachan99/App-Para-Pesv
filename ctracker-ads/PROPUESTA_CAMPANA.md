@@ -21,6 +21,10 @@
 
 **Oportunidades:** convertir los tres pasos de la web en la narrativa del Reel ("te dice dónde está, te avisa, te deja actuar"); mostrar el taller, la instalación oculta en 40–90 min y la central activa como prueba de cercanía; usar SICOV para empresas de transporte.
 
+**Plataforma real (capturas "CTRACKERGPS Central de Monitoreo"):** mapa satelital a pantalla completa, panel izquierdo "Buscar dispositivos" con la lista de unidades y su última conexión, barra inferior Mapa / Reportes / Ajustes / Cerrar sesión, y una **geocerca poligonal** sobre Ocaña en cian. Las escenas de interfaz del video ya imitan esa estructura con datos de demostración ("Moto 01").
+- **No publicar las capturas tal cual:** muestran un nombre real de cliente, la dirección IP y el puerto del servidor (`191.101.1.250:8082`, conexión "No segura"), e imágenes de Google Maps con sus condiciones de uso. Para el anuncio final, graba la pantalla con una cuenta de demostración y revisa la licencia de las imágenes de mapa.
+- **Recomendación técnica:** el servidor se abre por HTTP sin cifrar; conviene ponerle HTTPS antes de mostrarlo en público o pedirles a clientes que entren desde ahí.
+
 ## 2. Análisis del mercado (con fuentes)
 
 Todo lo que sigue sale de búsquedas web; muchas fuentes son blogs de talleres o herramientas con interés comercial, así que son indicios, no estudios.
@@ -146,7 +150,7 @@ Si lo haces en un entorno restringido, añade `--browser-executable=<ruta a Chro
 
 1. Confirmar la dirección (Los Seguros vs. Sesquicentenario) y tener a mano la habilitación SICOV.
 2. Logo vectorial o de alta resolución en `public/logo.png` (el actual mide 313×90 px).
-3. Capturas reales de "Entrar a la plataforma" en lugar de las pantallas ilustrativas.
+3. Grabar la plataforma real con una cuenta de demostración (sin nombres ni IP) para reemplazar las pantallas ilustrativas.
 4. Generar clips (sección 5), voz en off y audio, y mezclarlos.
 5. Reubicar textos fuera de las zonas no seguras de Meta (hoy varios titulares están en el 14 % superior).
 6. Mostrar el apagado remoto con cuidado: solo como reacción tras un robo, con el vehículo detenido (no representar cortes en marcha).
