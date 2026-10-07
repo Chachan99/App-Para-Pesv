@@ -28,7 +28,7 @@ const MotoScene: React.FC<{ moving?: boolean; alert?: boolean; title: string }> 
       <AbsoluteFill style={{ background: COLORS.alert, opacity: Math.abs(Math.sin(frame / 4.5)) * (alert ? 0.2 : 0.1) }} />
       {alert ? (
         <div style={{ position: "absolute", top: 1380, left: 60, right: 60 }}>
-          <AlertCard title="CTrackerGPS" body="Tu moto se está moviendo" icon="!" delay={10} />
+          <AlertCard title="CTrackerGPS" body="Encendido no autorizado" icon="!" delay={10} />
         </div>
       ) : null}
       <Headline top={150} size={112}>{title}</Headline>

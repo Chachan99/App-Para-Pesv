@@ -1,23 +1,25 @@
 # CTrackerGPS · Propuesta de campaña de video
 
-> **Fuente de los datos de CTrackerGPS:** capturas del Instagram @ctrackergps que compartiste (perfil y 4 publicaciones de mayo-junio 2025). `ctrackergps.com` sigue bloqueado desde mi entorno, así que **no revisé la web**. Lo que no aparece en esas capturas queda apagado en `src/theme.ts` → `FEATURES` hasta que lo confirmes.
+> **Fuente de los datos de CTrackerGPS:** capturas de `ctrackergps.com` (7/10/2026) y del Instagram @ctrackergps que compartiste. Mi entorno no puede abrir esos sitios, así que no revisé las demás páginas de la web (precios, "Nosotros", detalle del servicio). Todo lo que el video muestra está publicado por la empresa; lo demás queda apagado en `src/theme.ts` → `FEATURES`.
 
 ## 1. Análisis de CTrackerGPS
 
-**Datos verificados (Instagram):**
-- Perfil: 43 publicaciones, 1.529 seguidores. Bio: "Monitoreo satelital 24/7", "Plataforma de rastreo satelital", "Protege tu vehículo de robo". Destacados: Ubicación, Motos, Busetas, Carros, Camiones, Maquinaria.
-- Contacto: WhatsApp **312 396 1706**, taller en **Cra. 28A No. 88-17, barrio Sesquicentenario, Ocaña**, www.ctrackergps.com.
-- Oferta visible: GPS Teltonika **FMC130** (lee el computador del carro CAN, conexión a sensores, detecta eventos, 4G y Bluetooth) y **FMC920** (reporte 24/7, memoria de reportes, históricos, 4.5G, "rastreo preciso, alertas inteligentes y fácil instalación", pensado para flotas); **dashcams JC400, JC450 y JC181** de tres cámaras (Full HD, grabación en bucle, sensor de impacto, GPS integrado con ubicación y velocidad); **taller de GPS** con instalación por expertos, "acceso a monitoreo en tiempo real" y "servicio garantizado en Ocaña".
-- Estilo: azul y cian con degradados, patrones hexagonales, tipografía blanca en negrita, botón "¡Solicítalo ya!", logo de escudo con "CT". Tono cercano, con voseo en algunos textos ("registrá", "contáctanos"). Hashtags propios: #ctrackergps #gpsvehicular #seguridad #tecnologia #gestióndeflotas.
-- Interacción baja (1 a 4 "me gusta" por publicación revisada): hay margen enorme de mejora.
+**Verificado en la web:**
+- Titular: "Control total de tu flota en tiempo real". Subtítulo: "Protege tus vehículos y optimiza tus recursos. El sistema de rastreo satelital más avanzado para seguridad personal y gestión empresarial."
+- Datos duros: **central de monitoreo 24 h, todos los días** (incluye festivos y madrugadas), **SICOV: operador autorizado**, instalación típica **40–90 min** con el equipo oculto y probado, atención lun–vie 8 a.m.–6 p.m., punto de instalación en **Los Seguros, Ocaña**; también van hasta donde esté el vehículo dentro del municipio. El equipo reporta por red celular en cualquier parte del país.
+- Su propia estructura de venta, en tres pasos: **Saber dónde está** (ubicación en tiempo real, historial de recorridos, geozonas) → **Enterarte a tiempo** (alertas a tu WhatsApp: exceso de velocidad, encendido no autorizado, desconexión de batería con batería de respaldo) → **Reaccionar en un robo** (apagado remoto del motor desde la app, botón de pánico oculto en cabina, monitoreo 24 h).
+- Proceso: cotizas por WhatsApp (precio el mismo día) → agendas → instalan → te entregan usuario y alertas en tu WhatsApp. Botón "Entrar a la plataforma".
+- Contacto: +57 312 396 1706. Dirección en la web: Los Seguros, Ocaña.
 
-**Fortalezas:** equipos de marca reconocida (Teltonika), taller físico y atención local, cobertura de motos a maquinaria, monitoreo 24/7 declarado, dashcam como línea extra.
+**Verificado en Instagram:** 43 publicaciones, 1.529 seguidores, 1 a 4 "me gusta" por publicación revisada. Equipos Teltonika FMC130 y FMC920 y dashcams de tres cámaras JC400, JC450 y JC181 (Full HD, grabación en bucle, sensor de impacto, GPS integrado). Categorías: motos, busetas, carros, camiones y maquinaria. Estilo: azul y cian con hexágonos, texto blanco en negrita, botón "¡Solicítalo ya!". El logo es un escudo "CT" con "CTRACKER Global GPS".
 
-**Debilidades de comunicación (según lo visto):** las piezas son fichas técnicas de producto ("Conexión a sensores", "Tec. 4.5G"), no beneficios emocionales; se habla de equipos, no de tranquilidad; poco contenido en video; interacción casi nula.
+**Discrepancia a resolver:** el Instagram (mayo 2025) da la dirección *Cra. 28A No. 88-17, barrio Sesquicentenario*, y la web dice *Los Seguros*. Usé la de la web (más reciente). Confirma cuál es la correcta.
 
-**Oportunidades:** pasar de "vendemos dispositivos Teltonika" a "te avisamos y tienes el control"; mostrar el taller y la instalación en Ocaña como prueba de cercanía; usar la línea de dashcam como contenido de seguridad vial.
+**Fortalezas:** catálogo completo (incluye apagado remoto y botón de pánico, que muchas marcas no destacan), SICOV, central 24/7 real, instalación local en menos de 2 horas, atención el mismo día.
 
-**No encontrado en lo revisado (no usar sin confirmar):** apagado remoto, alertas por WhatsApp, geocercas, SICOV, precios, planes.
+**Debilidades de comunicación:** el Instagram publica fichas técnicas de producto ("Conexión a sensores", "Tec. 4.5G"), no beneficios; casi no hay video; interacción mínima. La web sí comunica bien en tres pasos, pero esa claridad no llegó a las redes.
+
+**Oportunidades:** convertir los tres pasos de la web en la narrativa del Reel ("te dice dónde está, te avisa, te deja actuar"); mostrar el taller, la instalación oculta en 40–90 min y la central activa como prueba de cercanía; usar SICOV para empresas de transporte.
 
 ## 2. Análisis del mercado (con fuentes)
 
@@ -27,7 +29,7 @@ Todo lo que sigue sale de búsquedas web; muchas fuentes son blogs de talleres o
 - **Competidor con mensaje de resultado:** Ituran Colombia comunica recuperación de hasta 98 % de vehículos y motos hurtados y 31 minutos promedio de recuperación, con centro de monitoreo 24/7 y foco en motos (cifras de la propia empresa, no verificadas). Fuentes: [Portafolio – motos robadas](https://www.portafolio.co/negocios/vehiculo/ituran-senala-que-en-el-primer-semestre-se-robaron-mas-de-16-000-motos-en-el-pais-639334), [Portafolio – 31 minutos](https://www.portafolio.co/negocios/vehiculo/recuperan-vehiculos-hurtados-en-31-minutos-luego-de-reportar-el-robo-627652).
   - Patrón: la competencia grande vende **cifras de recuperación y central 24/7**. CTrackerGPS no debe imitar cifras que no pueda demostrar; puede ganar con **cercanía y claridad**.
 - **Precios de referencia (un solo taller, Bogotá):** alarma básica desde ~$300.000 COP; sistema con GPS e inmovilizador puede superar $1.500.000 COP. No encontré planes mensuales. Fuente: [C3 Care Car Center](https://www.c3carecarcenter.com/blog/precios-sistemas-antirrobo/).
-- **SICOV:** regulado por la Supertransporte. Resolución 14306 de 2024 y su anexo técnico (pasajeros por carretera), con circulares que cambian el cronograma (mayo y julio de 2026). No pude confirmar si aplica a carga ni requisitos técnicos del GPS. Fuentes: [Circular 11-may-2026](https://www.supertransporte.gov.co/documentos/2026/Mayo/Transito_11/Circular_No._20265330000064_del_11_de_mayo_de_2026.pdf), [Circular 15-ago-2025](https://www.supertransporte.gov.co/documentos/2025/agosto/Juridica_16/CIRCULAR_EXTERNA_No_20255330000114-del_15_de_agosto_de_2025.pdf). **No usar SICOV en publicidad sin certificación propia.**
+- **SICOV:** regulado por la Supertransporte. Resolución 14306 de 2024 y su anexo técnico (pasajeros por carretera), con circulares que cambian el cronograma (mayo y julio de 2026). No pude confirmar si aplica a carga ni requisitos técnicos del GPS. Fuentes: [Circular 11-may-2026](https://www.supertransporte.gov.co/documentos/2026/Mayo/Transito_11/Circular_No._20265330000064_del_11_de_mayo_de_2026.pdf), [Circular 15-ago-2025](https://www.supertransporte.gov.co/documentos/2025/agosto/Juridica_16/CIRCULAR_EXTERNA_No_20255330000114-del_15_de_agosto_de_2025.pdf). La web de CTrackerGPS dice "SICOV · Operador autorizado": **conviene tener a mano el número o la resolución de habilitación** antes de mencionarlo en anuncios.
 - **Duración de Reels:** las fuentes coinciden en que 15–30 s es lo más seguro para marcas y que pesa más la retención que la duración. Fuentes: [Kontentino](https://www.kontentino.com/es/preguntas-y-respuestas/cuanto-pueden-durar-los-instagram-reels/), [Go Viral](https://www.go-viral.app/es/blog/duracion-instagram-reels/).
 - **Formato Meta Ads:** 9:16, 1080×1920 (algunas fuentes mencionan 1440×2560, sin confirmar). **Zonas seguras:** reservar ~14 % arriba y entre 20 % y 35 % abajo (las fuentes discrepan; usar 35 % para ser conservador). Fuente: [AdNabu](https://blog.adnabu.com/meta-ads/meta-safe-zones/). Confirmar en la vista previa de Ads Manager.
 - **No pude investigar con fuentes fiables:** tendencias actuales de TikTok, Facebook Reels y rendimiento de anuncios GPS. No las invento.
@@ -36,8 +38,9 @@ Todo lo que sigue sale de búsquedas web; muchas fuentes son blogs de talleres o
 
 - **Posicionamiento:** *"La tecnología de rastreo de Ocaña: tu vehículo puede estar lejos, pero nunca fuera de tu control."*
 - **Narrativa:** riesgo (3 s) → solución visible (mapa, alerta) → control → respaldo → llamado a escribir por WhatsApp.
+- **Narrativa en 3 pasos (de su propia web):** saber dónde está → enterarte a tiempo → reaccionar en un robo.
 - **Prueba antes que promesa:** mostrar la interfaz real. **Reemplazar las pantallas ilustrativas por capturas de la plataforma real** apenas las tengas.
-- **Diferenciar de "GPS chino genérico":** paleta sobria, tipografía limpia, sin cifras infladas, rostros locales, instalación y soporte en Ocaña (si se confirma).
+- **Diferenciar de "GPS chino genérico":** paleta sobria, tipografía limpia, sin cifras infladas, rostros locales, instalación y soporte en Ocaña .
 - **Presupuesto y medición:** probar 3 ganchos distintos en Meta con la misma pieza; medir retención a 3 s y mensajes de WhatsApp iniciados.
 
 ## 4. Video principal (30 s · 1080×1920 · 30 fps)
@@ -46,12 +49,12 @@ Todo lo que sigue sale de búsquedas web; muchas fuentes son blogs de talleres o
 |---|---|---|---|---|---|---|
 | 0–3 s | Gancho | Vehículo nocturno, figura se acerca, celular con alerta roja | ¿Y SI TU VEHÍCULO SE MUEVE SIN TI? | "¿Y si tu vehículo se mueve… sin ti?" | Alarma corta + impacto grave | Acercamiento lento |
 | 3–7 s | Mapa | Mapa con ruta y punto en vivo | UBICACIÓN EN TIEMPO REAL | "Con CTrackerGPS, sabes dónde está." | Whoosh + pings de interfaz | Zoom digital suave |
-| 7–11 s | Alertas | Celular con 3–4 notificaciones | ALERTAS DIRECTAS A TU CELULAR | "Cada movimiento, directo a tu celular." | Notificación ×3 | Fijo con leve deriva |
-| 11–15 s | Control | Panel de la app: ubicación, historial, zona segura | TOMA EL CONTROL | "Y tú tienes el control." | Clic de interfaz | Empuje lento |
+| 7–11 s | Alertas | WhatsApp con encendido no autorizado, desconexión de batería, salida de geozona, exceso de velocidad | ALERTAS DIRECTAS A TU CELULAR | "Cada movimiento, directo a tu celular." | Notificación ×3 | Fijo con leve deriva |
+| 11–15 s | Control | Panel de la app: ubicación, historial, geozonas, apagado remoto del motor (se envía el corte; el vehículo no vuelve a encender hasta que lo habilites) | TOMA EL CONTROL | "Y tú tienes el control." | Clic de interfaz | Empuje lento |
 | 15–19 s | Monitoreo | Pared de pantallas con mapas | MONITOREO 24/7 | "Con monitoreo satelital 24/7." | Zumbido tecnológico suave | Paneo lento |
 | 19–23 s | Vehículos | Moto, carro, camioneta, camión, bus, flota | MOTOS • CARROS • EMPRESAS • FLOTAS | "Para tu moto, tu carro o toda tu flota." | Whoosh en cada cambio | Cortes rápidos |
 | 23–27 s | Marca | Mapa con varias unidades → logo | CTRACKERGPS · Tecnología que protege lo que se mueve contigo. | "CTrackerGPS: tecnología que protege lo que se mueve contigo." | Whoosh ascendente + impacto suave | Alejamiento del mapa |
-| 27–30 s | Cierre | Logo, WhatsApp, web | PROTEGE TU VEHÍCULO HOY | "Protege tu vehículo hoy." | Pulso final | Fijo |
+| 27–30 s | Cierre | Logo, WhatsApp +57 312 396 1706, SICOV, web, dirección | PROTEGE TU VEHÍCULO HOY | "Protege tu vehículo hoy." | Pulso final | Fijo |
 
 **Implementado en Remotion:** composición `Reel-Principal` (900 fotogramas). Es un video de **gráficos animados** (siluetas, mapa, interfaz). No incluye personas reales ni metraje fotográfico: eso se genera con los prompts de la sección 5 y se coloca sobre la misma línea de tiempo.
 
@@ -113,7 +116,7 @@ Electrónica cinemática minimalista, sin voces, con licencia libre (por ejemplo
 
 #CTrackerGPS #RastreoGPS #RastreoVehicular #SeguridadVehicular #GPSColombia #Ocaña #NorteDeSantander #Flotas #TecnologiaColombia
 
-## 12. Campaña (5 videos posteriores + 2 ya construidos)
+## 12. Campaña (videos posteriores + 2 ya construidos)
 
 Ya implementados en Remotion: `Reel-Flotas` (27 s, empresas) y `Reel-Motos` (22 s, motocicletas).
 
@@ -123,8 +126,9 @@ Ya implementados en Remotion: `Reel-Flotas` (27 s, empresas) y `Reel-Motos` (22 
 4. **Caso de cliente (con permiso):** testimonio real de un transportador o dueño de moto.
 5. **Pregunta frecuente en 15 s:** "¿Qué pasa si se va la señal?", "¿Cuánto cuesta el plan?". Responder solo con datos reales de la empresa.
 6. **Flotas, ahorro:** control de kilometraje y velocidad, con datos reales del cliente.
-7. **Dashcam JC400/JC450/JC181:** "Tres cámaras, una misión": grabación en bucle y sensor de impacto (datos del propio Instagram).
-8. **Temporada alta (diciembre/viajes):** recordatorio de seguridad para viajes largos.
+7. **Instalación oculta en 40–90 min:** de la cotización por WhatsApp al monitoreo, en 4 pasos (de su web).
+8. **Dashcam JC400/JC450/JC181:** "Tres cámaras, una misión": grabación en bucle y sensor de impacto (datos del propio Instagram).
+9. **Temporada alta (diciembre/viajes):** recordatorio de seguridad para viajes largos.
 
 ## Cómo ver y exportar
 
@@ -140,9 +144,9 @@ Si lo haces en un entorno restringido, añade `--browser-executable=<ruta a Chro
 
 ## Lo que falta para dejarlo publicable
 
-1. Revisar `ctrackergps.com` (no pude abrirla) y ajustar `FEATURES` en `src/theme.ts`.
-2. Confirmar si ofrecen geocercas, apagado remoto y alertas por WhatsApp (hoy apagados).
-3. Logo vectorial o de alta resolución en `public/logo.png`.
-4. Capturas reales de la plataforma en lugar de las pantallas ilustrativas.
-5. Generar clips (sección 5), voz en off y audio, y mezclarlos.
-6. Reubicar textos fuera de las zonas no seguras de Meta (hoy varios titulares están en el 14 % superior).
+1. Confirmar la dirección (Los Seguros vs. Sesquicentenario) y tener a mano la habilitación SICOV.
+2. Logo vectorial o de alta resolución en `public/logo.png` (el actual mide 313×90 px).
+3. Capturas reales de "Entrar a la plataforma" en lugar de las pantallas ilustrativas.
+4. Generar clips (sección 5), voz en off y audio, y mezclarlos.
+5. Reubicar textos fuera de las zonas no seguras de Meta (hoy varios titulares están en el 14 % superior).
+6. Mostrar el apagado remoto con cuidado: solo como reacción tras un robo, con el vehículo detenido (no representar cortes en marcha).

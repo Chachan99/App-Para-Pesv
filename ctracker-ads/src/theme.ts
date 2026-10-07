@@ -18,23 +18,26 @@ export const FONT =
 export const BRAND = {
   name: "CTrackerGPS",
   web: "ctrackergps.com",
-  whatsapp: "WhatsApp 312 396 1706",
-  city: "Cra. 28A No. 88-17, Sesquicentenario · Ocaña",
+  whatsapp: "WhatsApp +57 312 396 1706",
+  city: "Los Seguros, Ocaña · Lun a vie 8 a.m. – 6 p.m.",
   tagline: "Tecnología que protege lo que se mueve contigo.",
 } as const;
 
 /**
- * Fuente: capturas del Instagram @ctrackergps (publicaciones de mayo-junio 2025 y bio).
- * true  = aparece en sus publicaciones o bio.
- * false = NO aparece en lo revisado; no mostrar hasta confirmar con la empresa.
+ * Fuente: ctrackergps.com (capturas del 7/10/2026) e Instagram @ctrackergps.
+ * true  = aparece publicado por la empresa.
+ * false = NO aparece; no mostrar hasta confirmar.
  */
 export const FEATURES = {
-  history: true, // "Históricos" (post FMC920)
-  fleetReports: true, // "Reporte 24/7", "Memoria de reportes" (post FMC920)
-  speedAlerts: true, // "ubicación y velocidad en tiempo real", "alertas inteligentes"
-  monitoring247: true, // bio: "Monitoreo satelital 24/7"
-  geofences: false, // no aparece en lo revisado
-  remoteCut: false, // apagado remoto: no aparece
-  whatsappAlerts: false, // alertas por WhatsApp: no aparece
-  sicov: false, // SICOV: no aparece
+  history: true, // "Historial de recorridos"
+  geofences: true, // "Geozonas"
+  speedAlerts: true, // "Exceso de velocidad"
+  ignitionAlert: true, // "Encendido no autorizado"
+  batteryAlert: true, // "Desconexión de batería"
+  whatsappAlerts: true, // "Las alertas llegan a tu WhatsApp"
+  remoteCut: true, // "Apagado remoto del motor"
+  panicButton: true, // "Botón de pánico"
+  monitoring247: true, // "Central de monitoreo 24 h, todos los días"
+  sicov: true, // "SICOV · Operador autorizado"
+  fleetReports: true, // Instagram: "Reporte 24/7", "Memoria de reportes"
 } as const;

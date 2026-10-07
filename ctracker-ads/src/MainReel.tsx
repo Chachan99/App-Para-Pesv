@@ -53,7 +53,7 @@ export const S1Hook: React.FC = () => {
       <AbsoluteFill style={{ background: COLORS.alert, opacity: pulse * 0.18 }} />
       <Phone width={520} style={{ top: 1280, rotate: "-4deg" }}>
         <div style={{ padding: "90px 30px" }}>
-          <AlertCard title="CTrackerGPS" body="Movimiento detectado" icon="!" delay={12} />
+          <AlertCard title="CTrackerGPS" body="Encendido no autorizado" icon="!" delay={12} />
         </div>
       </Phone>
       <Headline top={150} size={112}>¿Y si tu vehículo se mueve sin ti?</Headline>
@@ -96,9 +96,9 @@ export const S3Alerts: React.FC = () => {
           <div style={{ fontFamily: FONT, color: COLORS.muted, fontSize: 36, textAlign: "center", fontWeight: 700 }}>
             {whats ? "WhatsApp · CTrackerGPS" : "Notificaciones"}
           </div>
-          <AlertCard title="Movimiento detectado" body="Tu vehículo se está moviendo" icon="!" delay={6} color={whats ? green : COLORS.alert} />
-          <AlertCard title="Vehículo encendido" body="Motor en marcha" icon="⚡" delay={26} color={COLORS.amber} />
-          {FEATURES.geofences ? <AlertCard title="Salió de zona segura" body="Geocerca: Casa" icon="◎" delay={46} color={COLORS.cyan} /> : null}
+          {FEATURES.ignitionAlert ? <AlertCard title="Encendido no autorizado" body="Motor en marcha fuera de horario" icon="!" delay={6} color={whats ? green : COLORS.alert} /> : null}
+          {FEATURES.batteryAlert ? <AlertCard title="Desconexión de batería" body="Alguien intentó desconectar el equipo" icon="⚡" delay={26} color={COLORS.amber} /> : null}
+          {FEATURES.geofences ? <AlertCard title="Salió de la geozona" body="Tu vehículo salió del área" icon="◎" delay={46} color={COLORS.cyan} /> : null}
           {FEATURES.speedAlerts ? <AlertCard title="Exceso de velocidad" body="92 km/h" icon="▲" delay={66} color={COLORS.alert} /> : null}
         </div>
       </Phone>
@@ -123,15 +123,15 @@ export const S4Control: React.FC = () => {
           <div style={{ fontFamily: FONT, color: COLORS.white, fontSize: 46, fontWeight: 900 }}>Mi vehículo</div>
           <Btn label="Ver ubicación" active />
           {FEATURES.history ? <Btn label="Historial de recorridos" /> : null}
-          {FEATURES.geofences ? <Btn label="Zona segura" /> : null}
-          <div style={{ position: "relative", height: 380, borderRadius: 28, overflow: "hidden", border: `2px solid ${COLORS.cyan}55` }}>
-            <CityMap width={620} height={380} scale={2.2} originX={540} originY={960} routes={[{ pts: ROUTE_A, t: 0.1 + frame * 0.004, color: COLORS.cyan }]} />
+          {FEATURES.geofences ? <Btn label="Geozonas" /> : null}
+          <div style={{ position: "relative", height: 290, borderRadius: 28, overflow: "hidden", border: `2px solid ${COLORS.cyan}55` }}>
+            <CityMap width={620} height={290} scale={2.2} originX={540} originY={960} routes={[{ pts: ROUTE_A, t: 0.1 + frame * 0.004, color: COLORS.cyan }]} />
           </div>
-          {FEATURES.remoteCut ? <Btn label="Apagado remoto seguro" color={COLORS.alert} active={frame > 40} /> : null}
+          {FEATURES.remoteCut ? <Btn label="Apagado remoto del motor" color={COLORS.alert} active={frame > 40} /> : null}
         </div>
         {FEATURES.remoteCut ? (
-          <div style={{ position: "absolute", left: 40, right: 40, bottom: 160, opacity: confirm, scale: 0.9 + confirm * 0.1, fontFamily: FONT, background: "#0d1b2e", border: `3px solid ${COLORS.alert}`, borderRadius: 32, padding: 34, textAlign: "center", color: COLORS.white, fontSize: 36, fontWeight: 700 }}>
-            Confirma con tu clave para continuar
+          <div style={{ position: "absolute", left: 40, right: 40, bottom: 60, opacity: confirm, scale: 0.9 + confirm * 0.1, fontFamily: FONT, background: "#0d1b2e", border: `3px solid ${COLORS.alert}`, borderRadius: 32, padding: 34, textAlign: "center", color: COLORS.white, fontSize: 36, fontWeight: 700 }}>
+            Corte enviado · no vuelve a encender hasta que lo habilites
           </div>
         ) : null}
       </Phone>
@@ -165,7 +165,7 @@ export const S5Monitor: React.FC = () => {
       <ScanLine />
       <Headline top={150} size={104}>{FEATURES.monitoring247 ? "Monitoreo 24/7" : "Monitoreo en vivo"}</Headline>
       <div style={{ position: "absolute", bottom: 200, width: "100%", textAlign: "center" }}>
-        <Chip>CONTROL TOTAL</Chip>
+        <Chip>CENTRAL ACTIVA · TODOS LOS DÍAS</Chip>
       </div>
     </AbsoluteFill>
   );
@@ -239,6 +239,9 @@ export const S8Cta: React.FC = () => {
         <div style={{ position: "absolute", top: 1180, scale: pulse, fontFamily: FONT, fontWeight: 900, fontSize: 56, color: "#04140b", background: "#25d366", borderRadius: 999, padding: "34px 70px" }}>
           {BRAND.whatsapp}
         </div>
+        {FEATURES.sicov ? (
+          <div style={{ position: "absolute", top: 1330, fontFamily: FONT, fontWeight: 800, fontSize: 38, color: COLORS.cyan, border: `3px solid ${COLORS.cyan}`, borderRadius: 999, padding: "8px 30px" }}>SICOV · Operador autorizado</div>
+        ) : null}
         <div style={{ position: "absolute", top: 1420, fontFamily: FONT, fontWeight: 800, fontSize: 60, color: COLORS.white }}>{BRAND.web}</div>
         <div style={{ position: "absolute", top: 1520, fontFamily: FONT, fontWeight: 600, fontSize: 34, color: COLORS.muted }}>{BRAND.city}</div>
       </AbsoluteFill>
