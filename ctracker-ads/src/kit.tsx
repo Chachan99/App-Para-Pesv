@@ -19,16 +19,17 @@ type Pt = readonly [number, number];
 
 export const Grain: React.FC<{ opacity?: number }> = ({ opacity = 0.07 }) => {
   const frame = useCurrentFrame();
+  const k = frame % 6;
   return (
-    <AbsoluteFill style={{ pointerEvents: "none", opacity, mixBlendMode: "overlay" }}>
-      <svg width="100%" height="100%">
-        <filter id="grain">
-          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed={frame % 9} />
-          <feColorMatrix type="saturate" values="0" />
-        </filter>
-        <rect width="100%" height="100%" filter="url(#grain)" />
-      </svg>
-    </AbsoluteFill>
+    <AbsoluteFill
+      style={{
+        pointerEvents: "none",
+        opacity,
+        mixBlendMode: "overlay",
+        backgroundImage: `url(${staticFile("grain.png")})`,
+        backgroundPosition: `${k * 97}px ${k * 53}px`,
+      }}
+    />
   );
 };
 
@@ -258,15 +259,9 @@ export const CityMap: React.FC<{
   }
   return (
     <svg width={width} height={height} viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" style={{ position: "absolute", inset: 0 }}>
-      <defs>
-        <filter id="terrain" x="0" y="0" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.004 0.006" numOctaves="4" seed="11" result="n" />
-          <feColorMatrix in="n" values="0 0 0 0 0.05  0 0 0 0 0.20  0 0 0 0 0.16  0 0 0 1.2 -0.55" />
-        </filter>
-      </defs>
       <g style={{ transformOrigin: `${originX}px ${originY}px`, transform: `scale(${scale})` }}>
         <rect width={1080} height={1920} fill="#08141f" />
-        {texture ? <rect width={1080} height={1920} filter="url(#terrain)" /> : null}
+        {texture ? <image href={staticFile("terrain.png")} width={1080} height={1920} preserveAspectRatio="none" /> : null}
         {texture
           ? Array.from({ length: 13 * 11 }, (_, k) => {
               const cx = k % 13;
