@@ -108,7 +108,7 @@ Electrónica cinemática minimalista, sin voces, con licencia libre (por ejemplo
 ## 10. Caption de Instagram
 
 > ¿Y si tu vehículo se mueve mientras tú no estás? 🚨
-> Con CTrackerGPS sabes dónde está y recibes alertas en tu celular. Tecnología de rastreo para motos, carros y flotas, desde Ocaña (Cra. 28A No. 88-17, Sesquicentenario).
+> Con CTrackerGPS sabes dónde está y recibes alertas en tu celular. Tecnología de rastreo para motos, carros y flotas, desde Ocaña (Los Seguros).
 > 👉 Escríbenos por WhatsApp y protege tu vehículo hoy: 312 396 1706
 > 🌐 ctrackergps.com
 
