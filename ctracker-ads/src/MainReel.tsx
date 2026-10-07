@@ -3,27 +3,30 @@ import {
   AbsoluteFill,
   Easing,
   interpolate,
+  Sequence,
   Series,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
 import {
   AlertCard,
+  BottomNav,
   Chip,
   CityMap,
   DeviceRow,
+  Footage,
   GEOZONE,
   Headline,
+  KineticWord,
   Logo,
   NightBg,
+  NightRoad,
   Phone,
   ROUTE_A,
   ROUTE_B,
   ROUTE_C,
   ScanLine,
   SearchBar,
-  BottomNav,
-  VehicleIcon,
   Vignette,
   useFadeInOut,
 } from "./kit";
@@ -40,27 +43,23 @@ const Fade: React.FC<{ d: number; children: React.ReactNode }> = ({ d, children 
 export const S1Hook: React.FC = () => {
   const frame = useCurrentFrame();
   const pulse = Math.abs(Math.sin(frame / 4.5));
-  const personX = interpolate(frame, [0, 60], [1200, 960], { extrapolateRight: "clamp", easing: ease });
-  const carX = interpolate(frame, [55, 90], [0, -260], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.in(Easing.quad) });
+  const shake = frame > 14 && frame < 52 ? Math.sin(frame * 2.9) * 8 : 0;
   return (
     <AbsoluteFill>
-      <NightBg tint={COLORS.alert} />
-      <div style={{ position: "absolute", top: 760, left: 270, translate: `${carX}px 0px`, scale: interpolate(frame, [0, 90], [1, 1.08]) }}>
-        <VehicleIcon type="car" size={760} color={COLORS.white} />
-      </div>
-      <svg width={1080} height={1920} style={{ position: "absolute" }}>
-        <g transform={`translate(${personX},1010)`} fill="#02060c" stroke={COLORS.alert} strokeWidth={3} opacity={0.95}>
-          <circle cx={0} cy={-170} r={34} />
-          <path d="M-52 -128 Q0 -150 52 -128 L66 40 L28 40 L10 -40 L-10 40 L-48 40 Z" />
-        </g>
-      </svg>
-      <AbsoluteFill style={{ background: COLORS.alert, opacity: pulse * 0.18 }} />
-      <Phone width={520} style={{ top: 1280, rotate: "-4deg" }}>
-        <div style={{ padding: "90px 30px" }}>
-          <AlertCard title="CTrackerGPS" body="Encendido no autorizado" icon="!" delay={12} />
+      <Footage name="hook">
+        <NightRoad speed={0.7} />
+      </Footage>
+      <AbsoluteFill style={{ background: COLORS.alert, opacity: pulse * 0.17, mixBlendMode: "screen" }} />
+      <Phone width={640} statusTime="2:47" style={{ top: 560, translate: `${shake}px 0px`, scale: interpolate(frame, [0, 90], [1, 1.05]) }}>
+        <div style={{ padding: "150px 30px 0", fontFamily: FONT, textAlign: "center", color: COLORS.white }}>
+          <div style={{ fontSize: 30, fontWeight: 600, color: COLORS.muted }}>Madrugada</div>
+          <div style={{ fontSize: 170, fontWeight: 800, lineHeight: 1, letterSpacing: -4 }}>2:47</div>
+          <div style={{ marginTop: 70 }}>
+            <AlertCard title="Encendido no autorizado" body="Tu vehículo se está moviendo" icon="!" delay={10} />
+          </div>
         </div>
       </Phone>
-      <Headline top={150} size={112}>¿Y si tu vehículo se mueve sin ti?</Headline>
+      <Headline top={150} size={104}>¿Y si tu vehículo se mueve sin ti?</Headline>
       <Vignette />
     </AbsoluteFill>
   );
@@ -96,7 +95,7 @@ export const S3Alerts: React.FC = () => {
   return (
     <AbsoluteFill>
       <NightBg />
-      <Phone width={700} style={{ top: 330 }}>
+      <Phone width={700} style={{ top: 430 }}>
         <div style={{ padding: "110px 28px", display: "flex", flexDirection: "column", gap: 26 }}>
           <div style={{ fontFamily: FONT, color: COLORS.muted, fontSize: 36, textAlign: "center", fontWeight: 700 }}>
             {whats ? "WhatsApp · CTrackerGPS" : "Notificaciones"}
@@ -107,7 +106,7 @@ export const S3Alerts: React.FC = () => {
           {FEATURES.speedAlerts ? <AlertCard title="Exceso de velocidad" body="92 km/h" icon="▲" delay={66} color={COLORS.alert} /> : null}
         </div>
       </Phone>
-      <Headline top={130} size={92}>Alertas directas a tu celular</Headline>
+      <Headline top={140} size={88}>Alertas directas a tu celular</Headline>
       <Vignette />
     </AbsoluteFill>
   );
@@ -124,7 +123,7 @@ export const S4Control: React.FC = () => {
     <AbsoluteFill>
       <NightBg />
       <Phone width={700} style={{ top: 360 }}>
-        <CityMap width={700} height={1435} scale={1.5} originX={540} originY={900} polygon={FEATURES.geofences ? { pts: GEOZONE, color: COLORS.cyan } : undefined} routes={[{ pts: ROUTE_A, t: 0.55, color: COLORS.cyan }]} />
+        <CityMap texture={false} width={700} height={1435} scale={1.5} originX={540} originY={900} polygon={FEATURES.geofences ? { pts: GEOZONE, color: COLORS.cyan } : undefined} routes={[{ pts: ROUTE_A, t: 0.55, color: COLORS.cyan }]} />
         <div style={{ position: "absolute", top: 80, left: 24, right: 24, display: "flex", flexDirection: "column", gap: 14 }}>
           <SearchBar />
           <DeviceRow name="Moto 01" sub="en línea · hace 1 min" />
@@ -158,6 +157,7 @@ export const S5Monitor: React.FC = () => {
             <CityMap
               width={480}
               height={340}
+              texture={false}
               scale={1.8}
               originX={540}
               originY={960}
@@ -177,28 +177,21 @@ export const S5Monitor: React.FC = () => {
 };
 
 /* ── Escena 6 · Todo tipo de vehículo ── */
+const WORDS = ["MOTOS", "CARROS", "CAMIONES", "BUSES", "FLOTAS"];
 export const S6Vehicles: React.FC = () => {
-  const frame = useCurrentFrame();
-  const types = ["moto", "car", "pickup", "truck", "bus"] as const;
-  const idx = Math.min(Math.floor(frame / 20), 5);
-  const local = frame % 20;
-  const x = interpolate(local, [0, 6], [140, 0], { extrapolateRight: "clamp", easing: ease });
+  const { fps } = useVideoConfig();
   return (
     <AbsoluteFill>
-      <NightBg />
-      <div style={{ position: "absolute", top: 640, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: interpolate(local, [0, 4], [0, 1]), translate: `${x}px 0px` }}>
-        {idx < 5 ? (
-          <VehicleIcon type={types[idx]} size={940} />
-        ) : (
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", width: 960 }}>
-            {types.map((t) => (
-              <VehicleIcon key={t} type={t} size={440} />
-            ))}
-          </div>
-        )}
-      </div>
-      <Headline top={190} size={96}>Para cada necesidad</Headline>
-      <div style={{ position: "absolute", bottom: 220, width: "100%", textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 60, color: COLORS.cyan, letterSpacing: 2 }}>
+      <Footage name="vehiculos">
+        <NightBg />
+      </Footage>
+      {WORDS.map((w, i) => (
+        <Sequence key={w} from={i * 24} durationInFrames={24} premountFor={fps}>
+          <KineticWord word={w} index={i} total={WORDS.length} />
+        </Sequence>
+      ))}
+      <Headline top={190} size={84}>Para cada necesidad</Headline>
+      <div style={{ position: "absolute", bottom: 240, width: "100%", textAlign: "center", fontFamily: FONT, fontWeight: 800, fontSize: 44, color: COLORS.cyan, letterSpacing: 2 }}>
         MOTOS • CARROS • EMPRESAS • FLOTAS
       </div>
       <Vignette />

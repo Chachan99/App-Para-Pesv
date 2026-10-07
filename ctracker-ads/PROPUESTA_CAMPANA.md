@@ -60,7 +60,7 @@ Todo lo que sigue sale de búsquedas web; muchas fuentes son blogs de talleres o
 | 23–27 s | Marca | Mapa con varias unidades → logo | CTRACKERGPS · Tecnología que protege lo que se mueve contigo. | "CTrackerGPS: tecnología que protege lo que se mueve contigo." | Whoosh ascendente + impacto suave | Alejamiento del mapa |
 | 27–30 s | Cierre | Logo, WhatsApp +57 312 396 1706, SICOV, web, dirección | PROTEGE TU VEHÍCULO HOY | "Protege tu vehículo hoy." | Pulso final | Fijo |
 
-**Implementado en Remotion:** composición `Reel-Principal` (900 fotogramas). Es un video de **gráficos animados** (siluetas, mapa, interfaz). No incluye personas reales ni metraje fotográfico: eso se genera con los prompts de la sección 5 y se coloca sobre la misma línea de tiempo.
+**Implementado en Remotion (versión motion graphics):** composición `Reel-Principal` (900 fotogramas). Es un video de **gráficos animados** (carretera nocturna, mapa de ciudad, celular con notificaciones, tipografía cinética). No incluye personas ni vehículos fotográficos: eso requiere metraje real o generado por IA con los prompts de la sección 5. Los espacios para ese metraje ya existen: guarda los MP4 en `public/clips/` con los nombres de `public/clips/LEEME.md` y el video los usa solo, sin tocar código.
 
 ## 5. Prompts para generación de video (IA)
 

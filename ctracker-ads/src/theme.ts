@@ -1,3 +1,5 @@
+import { continueRender, delayRender, staticFile } from "remotion";
+
 export const COLORS = {
   bg: "#050b14",
   bg2: "#0a1626",
@@ -11,8 +13,17 @@ export const COLORS = {
   ok: "#2ee59d",
 } as const;
 
-export const FONT =
-  'Inter, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif';
+// Montserrat (variable) servida desde public/fonts: no depende de internet al renderizar.
+const fontHandle = delayRender("Cargando Montserrat");
+new FontFace("Montserrat", `url(${staticFile("fonts/Montserrat-var.woff2")})`, { weight: "100 900" })
+  .load()
+  .then((face) => {
+    document.fonts.add(face);
+    continueRender(fontHandle);
+  })
+  .catch(() => continueRender(fontHandle));
+
+export const FONT = `Montserrat, "Segoe UI", Helvetica, Arial, sans-serif`;
 
 // Contacto: se muestra en el cierre. Reemplazar por el número real.
 export const BRAND = {
