@@ -18,25 +18,23 @@ export const FONT =
 export const BRAND = {
   name: "CTrackerGPS",
   web: "ctrackergps.com",
-  whatsapp: "WhatsApp: [TU NÚMERO]",
-  city: "Ocaña, Norte de Santander",
+  whatsapp: "WhatsApp 312 396 1706",
+  city: "Cra. 28A No. 88-17, Sesquicentenario · Ocaña",
   tagline: "Tecnología que protege lo que se mueve contigo.",
 } as const;
 
 /**
- * Funciones NO verificadas: no se pudo leer ctrackergps.com ni Instagram
- * desde el entorno de desarrollo (bloqueado por el proxy). Las de abajo (false)
- * no se muestran mientras no se confirmen. Cámbialas a `true` solo si la empresa
- * realmente ofrece el servicio.
+ * Fuente: capturas del Instagram @ctrackergps (publicaciones de mayo-junio 2025 y bio).
+ * true  = aparece en sus publicaciones o bio.
+ * false = NO aparece en lo revisado; no mostrar hasta confirmar con la empresa.
  */
 export const FEATURES = {
-  // Funciones estándar del rastreo GPS (CONFIRMAR con la empresa):
-  geofences: true,
-  speedAlerts: true,
-  history: true,
-  fleetReports: true,
-  remoteCut: false, // apagado remoto
-  whatsappAlerts: false, // alertas por WhatsApp
-  monitoring247: false, // central de monitoreo 24/7
-  sicov: false, // soporte SICOV
+  history: true, // "Históricos" (post FMC920)
+  fleetReports: true, // "Reporte 24/7", "Memoria de reportes" (post FMC920)
+  speedAlerts: true, // "ubicación y velocidad en tiempo real", "alertas inteligentes"
+  monitoring247: true, // bio: "Monitoreo satelital 24/7"
+  geofences: false, // no aparece en lo revisado
+  remoteCut: false, // apagado remoto: no aparece
+  whatsappAlerts: false, // alertas por WhatsApp: no aparece
+  sicov: false, // SICOV: no aparece
 } as const;

@@ -240,7 +240,7 @@ export const S8Cta: React.FC = () => {
           {BRAND.whatsapp}
         </div>
         <div style={{ position: "absolute", top: 1420, fontFamily: FONT, fontWeight: 800, fontSize: 60, color: COLORS.white }}>{BRAND.web}</div>
-        <div style={{ position: "absolute", top: 1520, fontFamily: FONT, fontWeight: 600, fontSize: 40, color: COLORS.muted }}>{BRAND.city}</div>
+        <div style={{ position: "absolute", top: 1520, fontFamily: FONT, fontWeight: 600, fontSize: 34, color: COLORS.muted }}>{BRAND.city}</div>
       </AbsoluteFill>
       <Vignette />
     </AbsoluteFill>

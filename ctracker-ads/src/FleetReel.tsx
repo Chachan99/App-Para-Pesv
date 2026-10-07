@@ -70,11 +70,15 @@ const F3Data: React.FC = () => (
 
 const F4Geo: React.FC = () => (
   <AbsoluteFill>
-    <FleetMap geofence scale={1.15} />
+    <FleetMap geofence={FEATURES.geofences} scale={1.15} />
     <div style={{ position: "absolute", top: 1180, left: 60, right: 60 }}>
-      <AlertCard title="Salió de zona autorizada" body="Unidad 02 · Geocerca: Bodega" icon="◎" color={COLORS.amber} delay={30} />
+      {FEATURES.geofences ? (
+        <AlertCard title="Salió de zona autorizada" body="Unidad 02 · Geocerca: Bodega" icon="◎" color={COLORS.amber} delay={30} />
+      ) : (
+        <AlertCard title="Exceso de velocidad" body="Unidad 02 · 92 km/h" icon="▲" color={COLORS.alert} delay={30} />
+      )}
     </div>
-    <Headline top={150} size={96}>Geocercas y alertas</Headline>
+    <Headline top={150} size={96}>{FEATURES.geofences ? "Geocercas y alertas" : "Alertas inteligentes"}</Headline>
     <Vignette />
   </AbsoluteFill>
 );

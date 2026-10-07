@@ -1,18 +1,23 @@
 # CTrackerGPS · Propuesta de campaña de video
 
-> **Límite importante de esta investigación.** Desde el entorno donde trabajé, `ctrackergps.com` e `instagram.com/ctrackergps` estaban **bloqueados** (proxy de red) y las búsquedas web no devolvieron ninguna página de la empresa. Por eso **no pude verificar** sus servicios, textos, colores ni publicaciones. Lo único que sé de CTrackerGPS viene de tu mensaje (Ocaña, rastreo GPS, seguridad, monitoreo y flotas) y del logo que enviaste.
-> Solución aplicada: el video solo muestra funciones estándar del rastreo GPS y deja **apagadas** las de mayor riesgo (apagado remoto, WhatsApp, monitoreo 24/7, SICOV). Se activan en `src/theme.ts` → `FEATURES`, solo después de confirmar que la empresa las ofrece.
+> **Fuente de los datos de CTrackerGPS:** capturas del Instagram @ctrackergps que compartiste (perfil y 4 publicaciones de mayo-junio 2025). `ctrackergps.com` sigue bloqueado desde mi entorno, así que **no revisé la web**. Lo que no aparece en esas capturas queda apagado en `src/theme.ts` → `FEATURES` hasta que lo confirmes.
 
 ## 1. Análisis de CTrackerGPS
 
-**Lo que sí se ve (logo):** escudo con "CT" y "CTRACKER Global GPS", cian neón y blanco metalizado sobre fondo oscuro. Esa paleta se usó en todo el video (`#27e3ff`, `#f2f2fa`, fondos azul noche). El logo recibido mide 313×90 px: se ve pixelado a 1080 px de ancho. **Pide el vector (SVG/AI) o un PNG de al menos 1500 px.**
+**Datos verificados (Instagram):**
+- Perfil: 43 publicaciones, 1.529 seguidores. Bio: "Monitoreo satelital 24/7", "Plataforma de rastreo satelital", "Protege tu vehículo de robo". Destacados: Ubicación, Motos, Busetas, Carros, Camiones, Maquinaria.
+- Contacto: WhatsApp **312 396 1706**, taller en **Cra. 28A No. 88-17, barrio Sesquicentenario, Ocaña**, www.ctrackergps.com.
+- Oferta visible: GPS Teltonika **FMC130** (lee el computador del carro CAN, conexión a sensores, detecta eventos, 4G y Bluetooth) y **FMC920** (reporte 24/7, memoria de reportes, históricos, 4.5G, "rastreo preciso, alertas inteligentes y fácil instalación", pensado para flotas); **dashcams JC400, JC450 y JC181** de tres cámaras (Full HD, grabación en bucle, sensor de impacto, GPS integrado con ubicación y velocidad); **taller de GPS** con instalación por expertos, "acceso a monitoreo en tiempo real" y "servicio garantizado en Ocaña".
+- Estilo: azul y cian con degradados, patrones hexagonales, tipografía blanca en negrita, botón "¡Solicítalo ya!", logo de escudo con "CT". Tono cercano, con voseo en algunos textos ("registrá", "contáctanos"). Hashtags propios: #ctrackergps #gpsvehicular #seguridad #tecnologia #gestióndeflotas.
+- Interacción baja (1 a 4 "me gusta" por publicación revisada): hay margen enorme de mejora.
 
-**Pendiente de verificar tú (no lo puedo afirmar):** lista exacta de servicios, planes, números de contacto, tono de la web, clientes, estilo del Instagram, tiempos de respuesta, cobertura.
+**Fortalezas:** equipos de marca reconocida (Teltonika), taller físico y atención local, cobertura de motos a maquinaria, monitoreo 24/7 declarado, dashcam como línea extra.
 
-**Oportunidades (hipótesis a confirmar):**
-- Ser la empresa de rastreo **local de Ocaña y la región**: cercanía y respuesta rápida frente a marcas nacionales.
-- Comunicar **resultado emocional** (control, tranquilidad), no catálogo de dispositivos.
-- Pocas marcas locales tienen video con aspecto profesional: la barrera es baja.
+**Debilidades de comunicación (según lo visto):** las piezas son fichas técnicas de producto ("Conexión a sensores", "Tec. 4.5G"), no beneficios emocionales; se habla de equipos, no de tranquilidad; poco contenido en video; interacción casi nula.
+
+**Oportunidades:** pasar de "vendemos dispositivos Teltonika" a "te avisamos y tienes el control"; mostrar el taller y la instalación en Ocaña como prueba de cercanía; usar la línea de dashcam como contenido de seguridad vial.
+
+**No encontrado en lo revisado (no usar sin confirmar):** apagado remoto, alertas por WhatsApp, geocercas, SICOV, precios, planes.
 
 ## 2. Análisis del mercado (con fuentes)
 
@@ -43,7 +48,7 @@ Todo lo que sigue sale de búsquedas web; muchas fuentes son blogs de talleres o
 | 3–7 s | Mapa | Mapa con ruta y punto en vivo | UBICACIÓN EN TIEMPO REAL | "Con CTrackerGPS, sabes dónde está." | Whoosh + pings de interfaz | Zoom digital suave |
 | 7–11 s | Alertas | Celular con 3–4 notificaciones | ALERTAS DIRECTAS A TU CELULAR | "Cada movimiento, directo a tu celular." | Notificación ×3 | Fijo con leve deriva |
 | 11–15 s | Control | Panel de la app: ubicación, historial, zona segura | TOMA EL CONTROL | "Y tú tienes el control." | Clic de interfaz | Empuje lento |
-| 15–19 s | Monitoreo | Pared de pantallas con mapas | MONITOREO EN VIVO (24/7 si se confirma) | "Con respaldo profesional." | Zumbido tecnológico suave | Paneo lento |
+| 15–19 s | Monitoreo | Pared de pantallas con mapas | MONITOREO 24/7 | "Con monitoreo satelital 24/7." | Zumbido tecnológico suave | Paneo lento |
 | 19–23 s | Vehículos | Moto, carro, camioneta, camión, bus, flota | MOTOS • CARROS • EMPRESAS • FLOTAS | "Para tu moto, tu carro o toda tu flota." | Whoosh en cada cambio | Cortes rápidos |
 | 23–27 s | Marca | Mapa con varias unidades → logo | CTRACKERGPS · Tecnología que protege lo que se mueve contigo. | "CTrackerGPS: tecnología que protege lo que se mueve contigo." | Whoosh ascendente + impacto suave | Alejamiento del mapa |
 | 27–30 s | Cierre | Logo, WhatsApp, web | PROTEGE TU VEHÍCULO HOY | "Protege tu vehículo hoy." | Pulso final | Fijo |
@@ -58,14 +63,14 @@ Bloque de estilo común (pegar al final de cada prompt): *"cinematic night comme
 2. **Mapa (4 s).** Toma cenital estilo dron de una ciudad pequeña de noche; un auto avanza por una avenida y la imagen hace transición a un mapa digital oscuro con una ruta cian que sigue al auto. Cámara: dron descendente + fundido a interfaz. Realismo: tecnología plausible, sin hologramas.
 3. **Alertas (4 s).** Close-up de manos de un hombre de 35 años en su sala, celular iluminando su rostro; la pantalla muestra tres notificaciones consecutivas. Cámara: primer plano con profundidad de campo corta, leve respiración. Luz: luz de pantalla cian sobre rostro, fondo oscuro cálido.
 4. **Control (4 s).** Over-the-shoulder de una empresaria usando una app de rastreo en su celular dentro de una oficina oscura; toca botones de ubicación e historial. Cámara: empuje lento. (No mostrar situaciones ilegales ni cortes de motor peligrosos en marcha.)
-5. **Monitoreo (4 s).** Sala de operación con 6 pantallas con mapas oscuros; un operador (mujer, 30 años) revisa una pantalla con calma. Cámara: paneo lento de izquierda a derecha. Solo usar si la empresa tiene realmente centro de monitoreo; si no, mostrar una oficina con una pantalla.
+5. **Monitoreo (4 s).** Sala de operación con 6 pantallas con mapas oscuros; un operador (mujer, 30 años) revisa una pantalla con calma. Cámara: paneo lento de izquierda a derecha. La bio declara "Monitoreo satelital 24/7"; confirma si hay sala física antes de mostrarla (si no, usa una oficina con una pantalla).
 6. **Vehículos (4 s).** Secuencia de 6 planos de 0,6 s: moto, auto, camioneta, camión de carga, bus intermunicipal, 5 vehículos juntos en patio. Cámara: tomas laterales en travelling, mismo grading cian-azul noche.
 7. **Marca (4 s).** Vista aérea de varias unidades desplazándose por una avenida iluminada; el plano se funde al logo CTrackerGPS sobre fondo oscuro. Cámara: dron alejándose.
 8. **Cierre (3 s).** Dueño sonriendo tranquilo, sosteniendo el celular al lado de su auto al amanecer; plano final limpio sobre el que se coloca el logo y el CTA en Remotion. Cámara: plano medio estable.
 
 ## 6. Voz en off completa (≈ 27 s, español colombiano neutro)
 
-> ¿Y si tu vehículo se mueve… sin ti? Con CTrackerGPS, sabes dónde está. Cada movimiento, directo a tu celular. Y tú tienes el control. Con respaldo profesional. Para tu moto, tu carro o toda tu flota. CTrackerGPS: tecnología que protege lo que se mueve contigo. Protege tu vehículo hoy.
+> ¿Y si tu vehículo se mueve… sin ti? Con CTrackerGPS, sabes dónde está. Cada movimiento, directo a tu celular. Y tú tienes el control. Con monitoreo satelital 24/7. Para tu moto, tu carro o toda tu flota. CTrackerGPS: tecnología que protege lo que se mueve contigo. Protege tu vehículo hoy.
 
 ## 7. Textos en pantalla
 
@@ -73,7 +78,7 @@ Bloque de estilo común (pegar al final de cada prompt): *"cinematic night comme
 2. UBICACIÓN EN TIEMPO REAL
 3. ALERTAS DIRECTAS A TU CELULAR
 4. TOMA EL CONTROL
-5. MONITOREO EN VIVO *(MONITOREO 24/7 solo si se confirma)*
+5. MONITOREO 24/7
 6. MOTOS • CARROS • EMPRESAS • FLOTAS
 7. CTRACKERGPS · Tecnología que protege lo que se mueve contigo.
 8. PROTEGE TU VEHÍCULO HOY · ctrackergps.com
@@ -100,8 +105,8 @@ Electrónica cinemática minimalista, sin voces, con licencia libre (por ejemplo
 ## 10. Caption de Instagram
 
 > ¿Y si tu vehículo se mueve mientras tú no estás? 🚨
-> Con CTrackerGPS sabes dónde está y recibes alertas en tu celular. Tecnología de rastreo para motos, carros y flotas, desde Ocaña.
-> 👉 Escríbenos por WhatsApp y protege tu vehículo hoy: [TU NÚMERO]
+> Con CTrackerGPS sabes dónde está y recibes alertas en tu celular. Tecnología de rastreo para motos, carros y flotas, desde Ocaña (Cra. 28A No. 88-17, Sesquicentenario).
+> 👉 Escríbenos por WhatsApp y protege tu vehículo hoy: 312 396 1706
 > 🌐 ctrackergps.com
 
 ## 11. Hashtags
@@ -114,11 +119,12 @@ Ya implementados en Remotion: `Reel-Flotas` (27 s, empresas) y `Reel-Motos` (22 
 
 1. **"Un día de tu vehículo, minuto a minuto":** historial de recorridos de un día normal. Gancho: "¿Sabes por dónde anduvo tu carro hoy?".
 2. **Mito vs. realidad:** "Un GPS solo sirve cuando ya te robaron" → alertas antes de que pase.
-3. **Instalación en Ocaña:** técnico trabajando, rostro humano, cercanía. Solo con la autorización de la empresa y sus clientes.
+3. **Taller de GPS en Ocaña:** técnico trabajando, rostro humano, cercanía. Solo con la autorización de la empresa y sus clientes.
 4. **Caso de cliente (con permiso):** testimonio real de un transportador o dueño de moto.
 5. **Pregunta frecuente en 15 s:** "¿Qué pasa si se va la señal?", "¿Cuánto cuesta el plan?". Responder solo con datos reales de la empresa.
 6. **Flotas, ahorro:** control de kilometraje y velocidad, con datos reales del cliente.
-7. **Temporada alta (diciembre/viajes):** recordatorio de seguridad para viajes largos.
+7. **Dashcam JC400/JC450/JC181:** "Tres cámaras, una misión": grabación en bucle y sensor de impacto (datos del propio Instagram).
+8. **Temporada alta (diciembre/viajes):** recordatorio de seguridad para viajes largos.
 
 ## Cómo ver y exportar
 
@@ -134,8 +140,8 @@ Si lo haces en un entorno restringido, añade `--browser-executable=<ruta a Chro
 
 ## Lo que falta para dejarlo publicable
 
-1. Confirmar servicios reales y ajustar `FEATURES` en `src/theme.ts`.
-2. Poner el número real de WhatsApp en `BRAND.whatsapp`.
+1. Revisar `ctrackergps.com` (no pude abrirla) y ajustar `FEATURES` en `src/theme.ts`.
+2. Confirmar si ofrecen geocercas, apagado remoto y alertas por WhatsApp (hoy apagados).
 3. Logo vectorial o de alta resolución en `public/logo.png`.
 4. Capturas reales de la plataforma en lugar de las pantallas ilustrativas.
 5. Generar clips (sección 5), voz en off y audio, y mezclarlos.
